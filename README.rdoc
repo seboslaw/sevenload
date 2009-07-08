@@ -1,0 +1,29 @@
+= Sevenload API Gem
+
+This gem implements a ruby interface for the Sevenload API.
+
+This is just the beginning. Feel free to extend it!
+
+== Install
+
+If you haven't already, add github's gem server to your sources:
+
+  gem sources -a http://gems.github.com
+
+Then, it's as easy as:
+
+  sudo gem install sevenload
+
+== Use
+
+
+== Todo
+
+* Write a documentation:-)
+* Tests
+
+== Thanks to
+
+* {HTTParty}[http://github.com/jnunemaker/httparty/tree/master]: Easily one of the best tools I have used since I started using Ruby.
+
+=== Copyright (c) 2009 Sebastian Vogelsang. See LICENSE for details.
