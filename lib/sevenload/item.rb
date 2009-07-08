@@ -31,7 +31,6 @@ module Sevenload
         i = i+1
       end
       url = URI.encode(url)
-      puts url
       easy = Curl::Easy.http_get(url)
       item = XmlSimple.xml_in(easy.body_str)
     end
