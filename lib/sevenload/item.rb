@@ -3,6 +3,19 @@ module Sevenload
   class Item < Sevenload::Base
 
     UPLOAD_URL = "http://api.sevenload.com/rest/1.0/items/"
+    TOKEN_URL = "http://api.sevenload.com/rest/1.0/tokens/create"
+
+    def get_token(username, password, type, forUser)
+      curl = Curl::Easy.new(TOKEN_URL)
+      curl.http_post(
+      Curl::PostField.content('username', username),
+        Curl::PostField.content('password', password),
+        Curl::PostField.content('forUser', forUser),
+        Curl::PostField.content('type', type)
+      )
+      item = XmlSimple.xml_in(curl.body_str)
+      
+    end
 
     def get(video_token, token)
       raise "You must pass a video_token to use this method." unless video_token
